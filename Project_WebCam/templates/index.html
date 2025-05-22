@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Detection with MediaPipe</title>
+</head>
+<body>
+    <h1>Real-time Face Detection</h1>
+    <button onclick="toggleDetection()">Toggle Face Detection</button>
+    <div>
+        <img id="videoFeed" src="{{ url_for('video_feed') }}" width="640" height="480">
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
