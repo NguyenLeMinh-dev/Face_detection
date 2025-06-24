@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Face Detection Stream</title>
+  <!-- link tới CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>Live Video Stream</h1>
+
+  <img id="video" src="{{ url_for('video_feed') }}" width="640" /><br/>
+
+  <div class="controls">
+    <button id="btn-face">Tắt/Bật Face Detection</button>
+    <button id="btn-snap">Chụp Ảnh</button>
+    <button id="btn-rec">Bắt đầu/Giờ Ghi Video</button>
+    <span id="status"></span>
+  </div>
+
+  <div>Faces detected: <span id="count">0</span></div>
+  <div id="snaps"></div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
